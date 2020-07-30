@@ -137,8 +137,8 @@ public class ClimaService {
     }
     
     private static final boolean esPeriodoLluvia(Planeta p1, Planeta p2, Planeta p3, double tolerancia) {
-    	final var d1_2 = distance(p1.getPosicion(), p2.getPosicion());
-    	final var d1_3 = distance(p1.getPosicion(), p3.getPosicion());
+    	final double d1_2 = distance(p1.getPosicion(), p2.getPosicion());
+    	final double d1_3 = distance(p1.getPosicion(), p3.getPosicion());
     	
     	return !esPeriodoOptimo(p1, p2, p3, tolerancia) &&
     				90 < d1_2 && d1_2 < 180 && 0 < d1_3 && d1_3 <= 90;
