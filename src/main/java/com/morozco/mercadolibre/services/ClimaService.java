@@ -141,7 +141,8 @@ public class ClimaService {
     	final double d1_3 = distance(p1.getPosicion(), p3.getPosicion());
     	
     	return !esPeriodoOptimo(p1, p2, p3, tolerancia) &&
-    				90 < d1_2 && d1_2 < 180 && 0 < d1_3 && d1_3 <= 90;
+    				(90 < d1_2 && d1_2 < 180 && 0 < d1_3 && d1_3 <= 90 ||
+    				90 < d1_3 && d1_3 < 180 && 0 < d1_2 && d1_2 <= 90);
     }
     
     private static final boolean esPeriodoOptimo(Planeta p1, Planeta p2, Planeta p3, double tolerancia) {

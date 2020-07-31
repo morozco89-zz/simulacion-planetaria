@@ -54,7 +54,7 @@ class MercadolibreApplicationTests {
 				ClimaService.getBetasoide(),
 				ClimaService.getVulcano(),
 				1,
-				3652
+				365
 		);
 		
 		System.out.println("Hay (" + service.getPeriodosSequia() +
